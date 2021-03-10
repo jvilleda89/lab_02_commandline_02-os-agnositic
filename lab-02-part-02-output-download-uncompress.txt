@@ -135,7 +135,7 @@ cd ~
 ==========
 13. So... the lab materials are located at this url:
 
-https://filebin.net/retypweqyn7h8vrg/mtec1003-lab-02.zip?t=a0ulqlss
+https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/mtec1003-lab-02.zip
 
 Download the file using curl... to a file called mtec1003-lab-02.zip using the commandline.  
 
@@ -145,14 +145,18 @@ Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
+Curl -o mtec1003-lab-02.zip https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/mtec1003-lab-02.zip
 
-
-
+Output:
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  920k  100  920k    0     0  3196k      0 --:--:-- --:--:-- --:--:-- 3196k
 ==========
 14. We learned a command to uncompress a .zip file.  Use it to extract the files and folders from the file you just downloaded.
 
 Write down the command that you used to uncompress the file.
 ----------
+unzip mtec1003-lab-02.zip
 
 
 
@@ -160,7 +164,7 @@ Write down the command that you used to uncompress the file.
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
 
 Copy and paste the output below.
-----------
+books  logs  web
 
 
 
@@ -172,7 +176,9 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 
 Copy and paste the output below.
 ----------
-
+Desktop    Pictures    google.html       mtec1003-lab-02
+Documents  Recordings  jacquelinvilleda  mtec1003-lab-02.zip
+Music      Videos      mtec1003          stuff
 
 
 ==========
@@ -184,7 +190,7 @@ List the files in the directory you're currently in (which should be stuff).
 
 Copy and paste the output below.
 ----------
-
+hello.txt
 
 
 ==========
@@ -196,7 +202,9 @@ List the files in the directory you're currently in (which should be home).
 
 Copy and paste the output below.
 ----------
-
+Desktop    Pictures    google.html       mtec1003-lab-02      stuff.tar
+Documents  Recordings  jacquelinvilleda  mtec1003-lab-02.zip
+Music      Videos      mtec1003          stuff
 
 
 ==========
@@ -206,7 +214,8 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
-
+stuff/
+stuff/hello.txt
 
 
 ==========
@@ -214,7 +223,9 @@ Copy and paste the output below.
 
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
-
+Desktop    Pictures    google.html       mtec1003-lab-02      stuff.tar
+Documents  Recordings  jacquelinvilleda  mtec1003-lab-02.zip
+Music      Videos      mtec1003          stuff
 
 
 ==========
@@ -224,21 +235,23 @@ gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
-
+Desktop    Pictures    google.html       mtec1003-lab-02      stuff.tar.gz
+Documents  Recordings  jacquelinvilleda  mtec1003-lab-02.zip
+Music      Videos      mtec1003          stuff
 
 
 ==========
 22. Move stuff.tar.gz into the lab directory that we downloaded.  We didn't learn this command yet, so just type in exactly as is:
 
-$ mv stuff.tar.gz mtec1002-lab-02 
+$ mv stuff.tar.gz mtec1003-lab-02 
 
 MAKE SURE YOU MOVE THE FILE THAT ENDS IN .gz!
 
-Change your directory to mtec1002-lab-02.  
+Change your directory to mtec1003-lab-02.  
 
 List the files.  Copy and paste the output below (stuff.tar.gz should be there).
 ----------
-
+books  logs  stuff.tar.gz  web
 
 ==========
 23. You should be in the lab directory.  Let's uncompress the file.
@@ -247,28 +260,37 @@ $ tar -xvf stuff.tar.gz
 
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
-
+books  logs  stuff  stuff.tar.gz  web
 
 
 ==========
 24. Go back to your home directory
 [No output]
 ----------
-
+cd ~
 
 
 ==========
 25. Download and uncompress this file using curl and tar -xvf in your home directory:
 
-https://filebin.net/retypweqyn7h8vrg/secret.tar.gz?t=5jze7uyg
+https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/secrets.tar.gz
 
 REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 
 Write out the commands that you used to do this.
 ----------
+curl -o secrets.tar.gz https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/secrets.tar.gz
+
+tar -xvf secrets.tar.gz https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/secrets.tar.gz
+
 
 
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
 ----------
+Could not uncompress. Received error 
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
